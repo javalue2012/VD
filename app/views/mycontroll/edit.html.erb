@@ -1,0 +1,14 @@
+id = <%= @id1= @hs.id %>
+<%= form_tag "/xulyedit?id1=#{@id1}"%>
+<%= label_tag "id"%><td><br>
+<%= text_field_tag :id , params[:id]="#{@hs.id}"%><br>
+<%= label_tag "name"%><td><br>
+<%= text_field_tag :name , params[:name]="#{@hs.name}"%><br>
+<%= label_tag "age"%><td><br>
+<%= text_field_tag :age, params[:age]="#{@hs.age}"%><br>
+<%= label_tag "gmail"%><td><br>
+<%= text_field_tag :gmail, params[:gmail]="#{@hs.gmail}"%><br>
+<%= label_tag "password"%><td><br>
+<%= password_field_tag :password, params[:password]="#{@hs.password}"%><br>
+<br>
+<%= submit_tag "ok"%>

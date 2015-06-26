@@ -1,0 +1,21 @@
+<!DOCTYPE <!DOCTYPE html>
+<html>
+<head>
+<title>them</title>
+</head>
+<body>
+<%= form_tag "/timthanhcong"%>
+<%= label_tag "id"%><td><br>
+<%= text_field_tag :id, params[:id]%><br>
+<%= label_tag "name"%><td><br>
+<%= text_field_tag :name, params[:name]%><br>
+<%= label_tag "age"%><td><br>
+<%= text_field_tag :age, params[:age] %><br>
+<%= label_tag "gmail"%><td><br>
+<%= text_field_tag :gmail, params[:mail]%><br>
+<%= label_tag "password"%><td><br>
+<%= text_field_tag :password, params[:password] %><br>
+<br>
+<%= submit_tag "ok"%>
+</body>
+</html>

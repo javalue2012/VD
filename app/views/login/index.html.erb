@@ -1,0 +1,7 @@
+<%= form_tag '/checklogin' do%>
+<%= label_tag :gmail%>
+<%= text_field_tag :gmail , params[:gmai]%>
+<%= label_tag :password%>
+<%= text_field_tag  :password, params[:password]%>
+<%= submit_tag "login", :class => "btn btn-primary"%>
+<% end %>
