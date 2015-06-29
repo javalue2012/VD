@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
   resources :ideas
-  get 'mycontroll/index'
   get 'login/index'
-   get '/mycontroll/timthanhcong'
+  get 'mycontroll/index'
+  get '/mycontroll/timthanhcong'
   match '/login' => 'login#index' , via: [:get, :post]
   match '/checklogin' => 'login#checklogin' , via: [:get, :post]
   # The priority is based upon order of creation: first created -> highest priority.
@@ -16,7 +16,8 @@ Rails.application.routes.draw do
   match '/xulyedit' => 'mycontroll#xulyedit' , via: [:get, :post]
   match '/delete' => 'mycontroll#delete' , via: [:get, :post]
   match '/deletethanhcong' => 'mycontroll#deletethanhcong' , via: [:get, :post]
-  root 'login#index'
+  root 'mycontroll#myindex'
+  #root 'login#index'
   # You can have the root of your site routed with "root"
   # root 'welcome#index'
 

@@ -1,37 +1,39 @@
 
 <h1>DANH SACH</h1>
 <p>danh sach</p>
-<%= form_tag "/search" do %>
+
+<%= form_tag "/add" do %>
 <table border="1" style="width:50%">
   <thead>
     <tr>
       <th>id</th>
-      <th>name</th>
-       <th>age</th>
+      <th>tên</th>
+      <th>tuổi</th>
       <th>gmail</th>
       <th>password</th>
       <th>edit</th>
-      <th>add</th>
       <th>xoa</th>
+      <th>add</th>
       <th colspan="5"></th>
     </tr>
  <tbody>
  <% @hs.each do |f| %>
    <tr>
-      <td><%=f.id%></td>
-      <td><%=f.name%> </td>
-      <td><%=f.age%> </td>
-      <td><%=f.gmail%></td>
-      <td><%=f.password%></td>
-      <td><%= link_to 'edit', "/edit?id=#{f.id}" %></td>
-       <td><%= link_to 'add', "/add?id=#{f.id}" %></td>
-      <td><%= link_to 'delete', "/delete?id=#{f.id}", data: { confirm: 'Are you sure?' } %></td>
+        <td><%=f.id%> </td>
+        <td><%=f.name%> </td>
+        <td><%=f.age%></td>
+        <td><%=f.gmail%></td>
+        <td><%=f.password%></td>
+        <td><%= link_to 'edit', "/edit?id=#{f.id}" %></td>
+        <td><%= link_to 'xoa', "/xoa?id=#{f.id}" %></td>
+        <td><%= link_to 'add', "/add?id=#{f.id}" %></td>
+        <td><%= link_to 'load', "/load?id=#{f.id}" %></td>
+    <td><%= link_to 'Destroy', user, method: :delete,data: { confirm: 'Are you sure?' } %></td>
     </tr>
   <% end %>
  </tbody>
  </thead>
  </table>
  <br>
- <%= submit_tag "search" %>
-<%end %>
-
+ <%= submit_tag "add" %>
+<%end%>
