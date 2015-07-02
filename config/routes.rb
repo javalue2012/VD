@@ -1,7 +1,13 @@
 Rails.application.routes.draw do
+  resources :news
   resources :ideas
   get 'login/index'
+  get 'news/index'
+  get 'news/show'
+
+
   get 'mycontroll/index'
+  get 'mycontroll/news'
   get '/mycontroll/timthanhcong'
   match '/login' => 'login#index' , via: [:get, :post]
   match '/checklogin' => 'login#checklogin' , via: [:get, :post]
@@ -17,6 +23,8 @@ Rails.application.routes.draw do
   match '/delete' => 'mycontroll#delete' , via: [:get, :post]
   match '/deletethanhcong' => 'mycontroll#deletethanhcong' , via: [:get, :post]
   root 'mycontroll#myindex'
+
+  match '/index' => 'news#index' , via: [:get, :post]
   #root 'login#index'
   # You can have the root of your site routed with "root"
   # root 'welcome#index'
